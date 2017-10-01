@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/chewxy/gorgonia/tensor"
+	"github.com/gorgonia/tensor"
 )
 
 func TestHuffmanTree(t *testing.T) {

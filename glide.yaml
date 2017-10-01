@@ -2,6 +2,8 @@ package: github.com/ynqa/word-embedding
 import:
 - package: github.com/chewxy/lingo
   version: 311daca23597e20aea407445a6c8100bfca4e7f7
+- package: github.com/gorgonia/tensor
+  version: 9005b6d131dfc89162283c510574395a1cbfe235
 - package: github.com/olekukonko/tablewriter
   version: febf2d34b54a69ce7530036c7503b1c9fbfdf0bb
 - package: github.com/pkg/errors
@@ -12,5 +14,3 @@ import:
   version: 25b30aa063fc18e48662b86996252eabdcf2f0c7
 - package: gopkg.in/cheggaaa/pb.v2
   version: v2.0.4
-- package: github.com/chewxy/gorgonia/tensor
-  version: 9ccc360a0b1ad8fdcddf6140b4cc16135c2ce3d4

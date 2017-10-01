@@ -18,7 +18,7 @@ import (
 	"io"
 	"runtime"
 
-	"github.com/chewxy/gorgonia/tensor"
+	"github.com/gorgonia/tensor"
 )
 
 // SkipGram is a piece of Word2Vec model.

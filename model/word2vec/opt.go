@@ -15,8 +15,8 @@
 package word2vec
 
 import (
-	"github.com/chewxy/gorgonia/tensor"
 	"github.com/chewxy/lingo/corpus"
+	"github.com/gorgonia/tensor"
 )
 
 // Optimizer is the interface to initialize after scanning corpus once, and update the word vector.

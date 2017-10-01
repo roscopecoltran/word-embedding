@@ -20,7 +20,7 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/chewxy/gorgonia/tensor"
+	"github.com/gorgonia/tensor"
 )
 
 var next uint64 = 1

@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/chewxy/gorgonia/tensor"
+	"github.com/gorgonia/tensor"
 	"github.com/olekukonko/tablewriter"
 	"github.com/pkg/errors"
 )
