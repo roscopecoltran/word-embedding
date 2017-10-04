@@ -29,7 +29,6 @@ import (
 
 	"github.com/chewxy/lingo/corpus"
 	"github.com/pkg/errors"
-	"gopkg.in/cheggaaa/pb.v1"
 
 	"github.com/ynqa/word-embedding/model"
 )
@@ -48,7 +47,6 @@ type State struct {
 	ignoredWords        int
 	trainedWords        int
 	currentLearningRate float64
-	progress            *pb.ProgressBar
 
 	// concurrency stuff
 	cwsCh   chan struct{}
@@ -104,11 +102,7 @@ func (s *State) Preprocess(f io.ReadSeeker) (io.ReadCloser, error) {
 
 // Trainer trains a corpus. It assumes that Preprocess() has already been called
 func (s *State) Trainer(f io.ReadCloser, trainOne func(wordIDs []int, wordIndex int, lr float64) error) error {
-	s.startTraining()
-	defer func() {
-		s.endTraining()
-		f.Close()
-	}()
+	defer f.Close()
 
 	go s.incrementDoneWord()
 
@@ -167,7 +161,6 @@ func (s *State) trainOneBatch(wordIDs []int, wg *sync.WaitGroup, sema chan struc
 	defer wg.Done()
 	sema <- struct{}{} // get lock
 	for i, w := range wordIDs {
-		s.progress.Increment()
 
 		r := rand.Float64()
 		p := s.subsampleRate(w)
@@ -198,7 +191,6 @@ func (s *State) trainOneBatch(wordIDs []int, wg *sync.WaitGroup, sema chan struc
 
 func (s *State) trainRemainderBatch(wordIDs []int, trainOne func(wordIDs []int, wordIndex int, lr float64) error) error {
 	for i, w := range wordIDs {
-		s.progress.Increment()
 
 		r := rand.Float64()
 		p := s.subsampleRate(w)
@@ -267,15 +259,6 @@ func (s *State) Save(outputPath string) error {
 	w.WriteString(fmt.Sprintf("%v", vs.String()))
 
 	return nil
-}
-
-func (s *State) startTraining() {
-	s.progress = pb.New(s.TotalFreq()).SetWidth(80)
-	s.progress.Start()
-}
-
-func (s *State) endTraining() {
-	s.progress.Finish()
 }
 
 func (s *State) updateLearningRate() float64 {
