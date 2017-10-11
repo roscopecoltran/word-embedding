@@ -12,7 +12,5 @@ def main():
                               iter=1,
                               batch_words=10000)
 
-    # model.save('gensim_cbow.model')
-
 if __name__ == '__main__':
     main()
