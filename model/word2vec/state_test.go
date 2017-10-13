@@ -23,8 +23,8 @@ import (
 
 	"github.com/chewxy/gorgonia/tensor"
 	"github.com/chewxy/lingo/corpus"
-	"github.com/ynqa/word-embedding/config"
-	"github.com/ynqa/word-embedding/model"
+	"github.com/roscopecoltran/word-embedding/config"
+	"github.com/roscopecoltran/word-embedding/model"
 )
 
 // MockOperator satisfies the interface of Optimizer.

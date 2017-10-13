@@ -31,7 +31,7 @@ import (
 	"github.com/pkg/errors"
 	"gopkg.in/cheggaaa/pb.v1"
 
-	"github.com/ynqa/word-embedding/model"
+	"github.com/roscopecoltran/word-embedding/model"
 )
 
 // State stores all common configs for Word2Vec models.

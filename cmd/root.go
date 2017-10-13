@@ -20,7 +20,7 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	"github.com/ynqa/word-embedding/config"
+	"github.com/roscopecoltran/word-embedding/config"
 )
 
 // RootCmd is the root command for word embedding.

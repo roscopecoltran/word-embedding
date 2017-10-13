@@ -1,4 +1,4 @@
-package: github.com/ynqa/word-embedding
+package: github.com/roscopecoltran/word-embedding
 import:
 - package: github.com/chewxy/lingo
   version: 311daca23597e20aea407445a6c8100bfca4e7f7

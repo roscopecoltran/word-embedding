@@ -1,8 +1,8 @@
 # Word Embedding in Golang
 
 [![Build Status](https://travis-ci.org/ynqa/word-embedding.svg?branch=master)](https://travis-ci.org/ynqa/word-embedding)
-[![GoDoc](https://godoc.org/github.com/ynqa/word-embedding?status.svg)](https://godoc.org/github.com/ynqa/word-embedding)
-[![Go Report Card](https://goreportcard.com/badge/github.com/ynqa/word-embedding)](https://goreportcard.com/report/github.com/ynqa/word-embedding)
+[![GoDoc](https://godoc.org/github.com/roscopecoltran/word-embedding?status.svg)](https://godoc.org/github.com/roscopecoltran/word-embedding)
+[![Go Report Card](https://goreportcard.com/badge/github.com/roscopecoltran/word-embedding)](https://goreportcard.com/report/github.com/roscopecoltran/word-embedding)
 
 This is an implementation of word embedding (also referred to as word representation) models in Golang.
 
@@ -31,7 +31,7 @@ and their Compositionality [[pdf]](https://papers.nips.cc/paper/5021-distributed
 ## Installation
 
 ```
-$ go get -u github.com/ynqa/word-embedding
+$ go get -u github.com/roscopecoltran/word-embedding
 $ bin/word-embedding -h
 ```
 

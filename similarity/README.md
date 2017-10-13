@@ -20,7 +20,7 @@ Flags:
 
 ## Example
 
-For instance, after running [demo](https://github.com/ynqa/word-embedding#demo):
+For instance, after running [demo](https://github.com/roscopecoltran/word-embedding#demo):
 
 ```
 $ go run main.go sim -i example/word_vectors_sg.txt microsoft

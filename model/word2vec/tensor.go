@@ -16,7 +16,7 @@ package word2vec
 
 import (
 	"github.com/chewxy/gorgonia/tensor"
-	"github.com/ynqa/word-embedding/model"
+	"github.com/roscopecoltran/word-embedding/model"
 )
 
 var dtype tensor.Dtype = tensor.Float64

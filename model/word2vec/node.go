@@ -20,7 +20,7 @@ import (
 
 	"github.com/chewxy/gorgonia/tensor"
 	"github.com/chewxy/lingo/corpus"
-	"github.com/ynqa/word-embedding/model"
+	"github.com/roscopecoltran/word-embedding/model"
 )
 
 // Node stores the node with vector in huffman tree.

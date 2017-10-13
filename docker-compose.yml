@@ -1,1 +1,29 @@
+---
+version: '3'
 services:
+
+  data:
+    image: tianon/true
+    container_name: scraper-data
+    volumes:
+    - "$PWD:/app/src"
+    - "./shared/data:/data"
+    - "./shared/conf.d:/app/conf.d"
+    - "./shared/models:/opt/models"
+
+  # http://localhost:3000/bing?query=opencv
+  word-embedding:
+    container_name: word-embedding
+    build:
+      context: .
+      dockerfile: "word-embedding.alpine-dockerfile"
+    # network_mode: "host"
+    ports:
+    - 3002:3002
+    volumes:
+    - "${PWD}:/go/src/github.com/roscopecoltran/word-embedding" # change it for "$PWD:/app", if you want to share the source code with the container
+    - "./shared/dist:/app/dist"
+    - "./shared/cache:/data/cache"
+    - "./shared/conf.d:/app/conf.d"
+    command: ["/bin/bash"]
+    # command: ["/app/word-embedding"]

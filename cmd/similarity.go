@@ -21,8 +21,8 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/ynqa/word-embedding/config"
-	"github.com/ynqa/word-embedding/similarity"
+	"github.com/roscopecoltran/word-embedding/config"
+	"github.com/roscopecoltran/word-embedding/similarity"
 )
 
 // SimilarityCmd is the command for calculation of similarity.

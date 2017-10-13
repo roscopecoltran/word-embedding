@@ -20,7 +20,7 @@ import (
 	"github.com/chewxy/gorgonia/tensor"
 	"github.com/chewxy/lingo/corpus"
 	"github.com/pkg/errors"
-	"github.com/ynqa/word-embedding/model"
+	"github.com/roscopecoltran/word-embedding/model"
 )
 
 // NegativeSampling is a piece of Word2Vec optimizer.
