@@ -35,7 +35,7 @@ RUN \
     \
     glide install --strip-vendor && \
     \
-    gox -verbose -os="linux" -arch="amd64" -output="/app/{{.Dir}}" $(glide nodevendor)
+    gox -verbose -os="linux" -arch="amd64" -output="/app/{{.Dir}}" $(glide novendor)
 
 VOLUME ["/data", "/models"]
 

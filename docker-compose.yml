@@ -25,5 +25,6 @@ services:
     - "./shared/dist:/app/dist"
     - "./shared/cache:/data/cache"
     - "./shared/conf.d:/app/conf.d"
+    workdir: /app
     command: ["/bin/bash"]
     # command: ["/app/word-embedding"]
